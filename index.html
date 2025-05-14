@@ -16,14 +16,18 @@
     (function(m,e,t,r,i,k,a){
       m[i]=m[i]function(){(m[i].a=m[i].a[]).push(arguments)};
       m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) { return; }
+      }
       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");ym(101858767, "init", {
-    clickmap:true,
-    trackLinks:true,
-    accurateTrackBounce:true,
-    webvisor:true
-});
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+    ym(101858767, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+    });
   </script>
   <noscript><div><img src="https://mc.yandex.ru/watch/101858767" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Яндекс.Метрика -->
@@ -32,7 +36,8 @@
   <header>
     <h1>Тестовый магазин</h1>
     <p>Добро пожаловать! Ознакомьтесь с нашими товарами.</p>
-  </header>  <main>
+  </header>
+  <main>
     <div class="product">
       <h2>Товар 1</h2>
       <p>Описание товара. Отличный выбор по выгодной цене.</p>
@@ -43,7 +48,8 @@
       <p>Хит продаж! Спешите приобрести.</p>
       <button onclick="alert('Добавлено в корзину')">Купить</button>
     </div>
-  </main>  <footer>
+  </main>
+  <footer>
     &copy; 2025 Тестовый магазин
   </footer>
 </body>
